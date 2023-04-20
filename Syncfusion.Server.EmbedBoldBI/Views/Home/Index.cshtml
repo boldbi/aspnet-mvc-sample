@@ -10,26 +10,28 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
     <link rel="stylesheet" href="~/Content/Site.css" />
-    <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/v5.3.53/boldbi-embed.js"></script>
+    <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/latest/boldbi-embed.js"></script>
     <script type="text/javascript" src="~/Scripts/Embed/Index.js"></script>
     <script type="text/javascript">
-        var rootUrl = "@EmbedProperties.RootUrl";
-        var siteIdentifier = "@EmbedProperties.SiteIdentifier";
-        var environment = "@EmbedProperties.Environment";
+        var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
+        var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
+        var environment = "@GlobalAppSettings.EmbedDetails.Environment";
+        // var authorizationServerUrl = "@Url.Action("GetDetails", "Home")";
+        //var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
         var authorizationServerUrl = "@Url.Action("GetEmbedDetails", "Home")";
         var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
     </script>
 </head>
 
-<body onload="Init()">
-    <div id="container">
+<body onload="renderDashboard()">
+    @*<div id="container">
         <div class="header-section">
             <div id="grid-title">All Dashboard</div>
         </div>
         <div id="panel">
 
         </div>
-    </div>
+    </div>*@
     <div id="viewer-section">
         <div id="dashboard"></div>
     </div>

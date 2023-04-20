@@ -1,11 +1,12 @@
+using Newtonsoft.Json;
+using Syncfusion.Server.EmbedBoldBI.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+using System.IO;
+using System.Collections.Genericusing System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+//using Microsoft.AspNetCore.WebApplication;
 
 namespace Syncfusion.Server.EmbedBoldBI
 {
@@ -18,6 +19,28 @@ namespace Syncfusion.Server.EmbedBoldBI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //var builder = new BundleConfig();
+
+            //var builder1 = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            //builder.Services.AddControllersWithViews();
+
+            //var app = builder.Build();
+            try
+            {
+                string BasePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = File.ReadAllText(BasePath + "\\app_data\\embedConfig.json");
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+            }
+
+            catch (Exception)
+            {
+                //app.MapControllerRoute(
+                //name: "default",
+                //pattern: "{controller=Home}/{action=EmbedConfigErrorLog}");
+            }
         }
     }
 }
