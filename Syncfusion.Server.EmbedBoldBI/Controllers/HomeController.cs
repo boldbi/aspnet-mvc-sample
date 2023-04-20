@@ -38,7 +38,7 @@ namespace Syncfusion.Server.EmbedBoldBI.Controllers
                 client.BaseAddress = new Uri(GlobalAppSettings.EmbedDetails.ServerUrl);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Add("Authorization", token.TokenType + " " + token.AccessToken);
-                var result = client.GetAsync(GlobalAppSettings.EmbedDetails.ServerUrl + "/api/" + EmbedProperties.SiteIdentifier + "/v2.0/items?ItemType=2").Result;
+                var result = client.GetAsync(GlobalAppSettings.EmbedDetails.ServerUrl + "/api/" + GlobalAppSettings.EmbedDetails.SiteIdentifier + "/v2.0/items?ItemType=2").Result;
                 string resultContent = result.Content.ReadAsStringAsync().Result;
                 return resultContent;
             }
