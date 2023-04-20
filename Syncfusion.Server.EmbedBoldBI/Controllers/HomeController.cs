@@ -1,19 +1,30 @@
-﻿namespace Syncfusion.Server.EmbedBoldBI.Controllers
+﻿using System;
+using System.Net.Http;
+using System.Web.Mvc;
+using Syncfusion.Server.EmbedBoldBI.Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.IO;
+using System.Web.Routing;
+
+namespace Syncfusion.Server.EmbedBoldBI.Controllers
 {
-    using System;
-    using System.Net.Http;
-    using System.Web.Mvc;
-    using Syncfusion.Server.EmbedBoldBI.Models;
-    using Newtonsoft.Json;
-    using System.Collections.Generic;
-    using System.Security.Cryptography;
-
-
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View();
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "app_data", "embedConfig.json"));
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+                return View();
+            }
+            catch (Exception)
+            {
+                return View("EmbedConfigErrorLog");
+            }
         }
 
         [HttpGet]
