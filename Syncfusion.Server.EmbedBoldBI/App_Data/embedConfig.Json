@@ -1,7 +1,7 @@
 {
-  "ServerUrl": "http://localhost:53150/bi",
-  "UserEmail": "nithya.gopal@syncfusion.com",
-  "EmbedSecret": "zPeIjjUdiHLwdCaFQQZI2u13LHq3AZ0v",
+  "ServerUrl": "http://localhost:12345/bi",
+  "UserEmail": "",
+  "EmbedSecret": "",
   "EmbedType": "Component",
   "Environment": "Enterprise",
   "SiteIdentifier": "site/site1"
