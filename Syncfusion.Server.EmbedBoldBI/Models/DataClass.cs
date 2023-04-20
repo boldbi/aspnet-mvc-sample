@@ -1,16 +1,7 @@
 ﻿namespace Syncfusion.Server.EmbedBoldBI.Models
 {
     using Newtonsoft.Json;
-    using System.Runtime.Serialization;
-
-    [DataContract]
-    public class EmbedClass
-    {
-        [DataMember]
-        public string embedQuerString { get; set; }
-        [DataMember]
-        public string dashboardServerApiUrl { get; set; }
-    }
+   
     public class TokenObject
     {
         public string Message { get; set; }
