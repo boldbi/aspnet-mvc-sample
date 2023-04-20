@@ -16,6 +16,7 @@
         var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
         var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
         var environment = "@GlobalAppSettings.EmbedDetails.Environment";
+        var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
         // var authorizationServerUrl = "@Url.Action("GetDetails", "Home")";
         //var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
         var authorizationServerUrl = "@Url.Action("GetEmbedDetails", "Home")";
@@ -23,15 +24,15 @@
     </script>
 </head>
 
-<body onload="renderDashboard()">
-    @*<div id="container">
+<body onload="Init()">
+    <div id="container">
         <div class="header-section">
             <div id="grid-title">All Dashboard</div>
         </div>
         <div id="panel">
 
         </div>
-    </div>*@
+    </div>
     <div id="viewer-section">
         <div id="dashboard"></div>
     </div>

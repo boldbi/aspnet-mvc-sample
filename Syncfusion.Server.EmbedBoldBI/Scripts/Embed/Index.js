@@ -35,13 +35,13 @@ function ListDashboards(data) {
     }
 }
 
-function renderDashboard(/*dashboardId*/) {
+function renderDashboard(dashboardId) {
     this.dashboard = BoldBI.create({
         serverUrl: rootUrl + "/" + siteIdentifier,
-        dashboardId: "3b3d627b-91cc-49b7-b526-db6806d4f90f",
+        dashboardId: dashboardId,
         embedContainerId: "dashboard",
-        embedType: BoldBI.EmbedType.Component,
-        environment: environment.toLowerCase() == "enterprise" ? BoldBI.Environment.Enterprise : BoldBI.Environment.Cloud,
+        embedType: embedType.toLowerCase() == "component" ? BoldBI.EmbedType.Component : BoldBI.EmbedType.IFrame,
+        environment: environment.toLowerCase() == "cloud" ? BoldBI.Environment.Cloud : BoldBI.Environment.Enterprise,
         width: "100%",
         height: "100%",
         expirationTime: 100000,
