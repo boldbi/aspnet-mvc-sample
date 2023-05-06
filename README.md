@@ -18,7 +18,7 @@ The samples require the following requirements to run.
 
  ## Using the ASP.NET MVC sample
  
- * Open the ASP.NET Core sample in Visual Studio Code.
+ * Open the ASP.NET MVC sample in Visual Studio Code.
 
  * Download the embedConfig.json file by referring to this [help documentation](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/)
 
