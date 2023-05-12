@@ -1,80 +1,62 @@
-﻿namespace Syncfusion.Server.EmbedBoldBI.Models
-{
-    using Newtonsoft.Json;
-   
-    public class TokenObject
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+
+ [DataContract]
+    public class EmbedClass
     {
-        public string Message { get; set; }
+       [DataMember]
+       public string embedQuerString { get; set; }
+       [DataMember]
+       public string dashboardServerApiUrl { get; set; }
+    }
 
-        public string Status { get; set; }
+    public class TokenObject
+    {   
+       public string Message { get; set; }
 
-        public string Token { get; set; }
+       public string Status { get; set; }
+
+       public string Token { get; set; }
     }
 
     public class Token
-    {
-        [JsonProperty("access_token")]
-        public string AccessToken
-        {
-            get;
-            set;
-        }
+    {  
+       [JsonProperty("access_token")]
+       public string AccessToken {get;set;}
 
-        [JsonProperty("token_type")]
-        public string TokenType
-        {
-            get;
-            set;
-        }
+       [JsonProperty("token_type")]
+       public string TokenType {get;set; }
 
-        [JsonProperty("expires_in")]
-        public string ExpiresIn
-        {
-            get;
-            set;
-        }
+       [JsonProperty("expires_in")]
+       public string ExpiresIn {get; set;}
 
-        [JsonProperty("email")]
-        public string Email
-        {
-            get;
-            set;
-        }
+       [JsonProperty("email")]
+       public string Email {get;set;}
 
+       public string LoginResult {get;set;}
 
-        public string LoginResult
-        {
-            get;
-            set;
-        }
+       public string LoginStatusInfo {get;set;}
 
-        public string LoginStatusInfo
-        {
-            get;
-            set;
-        }
+       [JsonProperty(".issued")]
+       public string Issued { get; set; }
 
-        [JsonProperty(".issued")]
-        public string Issued { get; set; }
-
-        [JsonProperty(".expires")]
-        public string Expires { get; set; }
+       [JsonProperty(".expires")]
+       public string Expires { get; set; }
     }
 
     public class EmbedDetails
     {
-        public string Environment { get; set; }
+       public string Environment { get; set; }
 
-        public string SiteIdentifier { get; set; }
+       public string SiteIdentifier { get; set; }
 
-        public string ServerUrl { get; set; }
+       public string ServerUrl { get; set; }
 
-        public string EmbedSecret { get; set; }
+       public string EmbedSecret { get; set; }
 
-        public string UserEmail { get; set; }
+       public string UserEmail { get; set; }
 
-        public string EmbedType { get; set; }
-
-        public string DashboardId { get; set; }
+       public string EmbedType { get; set; }
+    
+       public string DashboardId { get; set; }
     }
-}

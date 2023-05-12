@@ -1,17 +1,19 @@
-﻿using System;
-using System.Net.Http;
-using System.Web.Mvc;
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Server.EmbedBoldBI.Models;
+using System;
+using System.Net.Http;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.IO;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Syncfusion.Server.EmbedBoldBI.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             try
@@ -54,10 +56,10 @@ namespace Syncfusion.Server.EmbedBoldBI.Controllers
 
                 var content = new FormUrlEncodedContent(new[]
                 {
-                    new KeyValuePair<string, string>("Username", GlobalAppSettings.EmbedDetails.UserEmail),
-                    new KeyValuePair<string, string>("grant_type", "embed_secret"),
-                    new KeyValuePair<string, string>("embed_secret", GlobalAppSettings.EmbedDetails.EmbedSecret)
-                });
+               new KeyValuePair<string, string>("Username", GlobalAppSettings.EmbedDetails.UserEmail),
+               new KeyValuePair<string, string>("grant_type", "embed_secret"),
+               new KeyValuePair<string, string>("embed_secret", GlobalAppSettings.EmbedDetails.EmbedSecret)
+           });
                 var result = client.PostAsync(GlobalAppSettings.EmbedDetails.ServerUrl + "/api/" + GlobalAppSettings.EmbedDetails.SiteIdentifier + "/token", content).Result;
                 string resultContent = result.Content.ReadAsStringAsync().Result;
                 var response = JsonConvert.DeserializeObject<Token>(resultContent);
@@ -65,25 +67,25 @@ namespace Syncfusion.Server.EmbedBoldBI.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("embeddetail/get")]
-        public ActionResult AuthorizationServer(string embedQuerString, string dashboardServerApiUrl)
+        [Route("AuthorizationServer")]
+        public string AuthorizationServer([FromBody] object embedQuerString)
         {
-            embedQuerString += "&embed_user_email=" + GlobalAppSettings.EmbedDetails.UserEmail;
-            var embedDetailsUrl = "/embed/authorize?" + embedQuerString.ToLower() + "&embed_signature=" + GetSignatureUrl(embedQuerString.ToLower());
+            var embedClass = Newtonsoft.Json.JsonConvert.DeserializeObject<EmbedClass>(embedQuerString.ToString());
 
+            var embedQuery = embedClass.embedQuerString;
+            // User your user-email as embed_user_email
+            embedQuery += "&embed_user_email=" + GlobalAppSettings.EmbedDetails.UserEmail;
+            var embedDetailsUrl = "/embed/authorize?" + embedQuery + "&embed_signature=" + GetSignatureUrl(embedQuery);
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(dashboardServerApiUrl);
+                client.BaseAddress = new Uri(embedClass.dashboardServerApiUrl);
                 client.DefaultRequestHeaders.Accept.Clear();
 
-                var result = client.GetAsync(dashboardServerApiUrl + embedDetailsUrl).Result;
+                var result = client.GetAsync(embedClass.dashboardServerApiUrl + embedDetailsUrl).Result;
                 string resultContent = result.Content.ReadAsStringAsync().Result;
-                return Json(resultContent);
+                return resultContent;
             }
         }
-
-
         public string GetSignatureUrl(string message)
         {
             var encoding = new System.Text.UTF8Encoding();

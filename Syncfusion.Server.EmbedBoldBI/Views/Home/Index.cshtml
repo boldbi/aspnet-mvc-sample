@@ -1,39 +1,28 @@
-﻿@using Syncfusion.Server.EmbedBoldBI.Models;
-@{
-    ViewBag.Title = "Home";
+﻿@{
+    ViewData["Title"] = "Home Page";
     Layout = null;
 }
-
-<!DOCTYPE html>
-<html>
-
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
-    <link rel="stylesheet" href="~/Content/Site.css" />
-    <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/latest/boldbi-embed.js"></script>
-    <script type="text/javascript" src="~/Scripts/Embed/Index.js"></script>
-    <script type="text/javascript">
-        var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
-        var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
-        var environment = "@GlobalAppSettings.EmbedDetails.Environment";
-        var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
-        var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
-        var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
-    </script>
-</head>
-
-<body onload="Init()">
+<script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/latest/boldbi-embed.js"></script>
+   <script type="text/javascript" src="~/js/Index.js"></script>
+   <script type="text/javascript">
+      var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
+      var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
+      var environment = "@GlobalAppSettings.EmbedDetails.Environment";
+      var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
+      var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
+      var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
+   </script>
+   </head>
+   <body onload="Init()">
     <div id="container">
-        <div class="header-section">
-            <div id="grid-title">All Dashboard</div>
-        </div>
-        <div id="panel">
-
-        </div>
+            <div class="header-section">
+                <div id="grid-title">All Dashboard</div>
+            </div>
+            <div id="panel"></div>
     </div>
+    
     <div id="viewer-section">
         <div id="dashboard"></div>
     </div>
 </body>
-
-</html>
