@@ -8,7 +8,7 @@
 
  ## Requirements/Prerequisites
 
- * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework) or a later version.
+ * [.NET Framework 4.8 or later](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
  * [Visual Studio Code](https://code.visualstudio.com/download).
 
  ### Help link
@@ -23,7 +23,7 @@
 
  * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
 
-    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b06bb792-2d80-4409-b13d-fb713922957b)
+    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/0ac2e737-bd7a-419b-824c-48f1589e78d8)
 
  * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). Please refer to the below image.
 
@@ -81,7 +81,7 @@
 
   * Visual studio code(https://code.visualstudio.com/download)
 
- ## How to run sample using visual studio code
+  ### How to run sample using visual studio code
  
   * Open the ASP.NET MVC sample in Visual Studio Code. 
    
