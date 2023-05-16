@@ -8,7 +8,7 @@
 
  ## Requirements/Prerequisites
 
- * [.NET Framework 4.8 or later](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
+ * [.NET Framework 7.0](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
  * [Visual Studio Code](https://code.visualstudio.com/download).
 
  ### Help link
@@ -104,5 +104,3 @@ Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.
 ## Documentation
 
 A complete Bold BI Embedding documentation can be found on [Bold BI Embedding Help](https://help.boldbi.com/embedded-bi/javascript-based/).
-
-> NOTE:  To mitigate issues related to NuGet packages, run the following command in package manager console Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r.
