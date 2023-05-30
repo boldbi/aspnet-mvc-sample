@@ -9,7 +9,7 @@ This project was created using ASP.NET MVC 4.8.1. The purpose of this applicatio
  ## Requirements/Prerequisites
 
  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
- * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
+ * [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 
  #### Help link
 
