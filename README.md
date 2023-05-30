@@ -17,7 +17,7 @@ This project was created using ASP.NET MVC 4.8.1. The purpose of this applicatio
 
  #### Supported browsers
   
-  * Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
+  * Google Chrome, Microsoft Edge, Mozilla Firefox.
 
  ## Configuration
 
@@ -30,9 +30,9 @@ This project was created using ASP.NET MVC 4.8.1. The purpose of this applicatio
     ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
     ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
 
- * Copy the downloaded embedConfig.json file and paste it into the designated [location](https://github.com/boldbi/aspnet-mvc-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure that you have placed it in the application as shown in the following image.
+ * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/aspnet-mvc-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure that you have placed it in the application as shown in the following image.
 
-   ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4d7e26c7-9a58-42d8-b212-89cafc022fd6)
+   ![EmbedConfig image](https://github.com/boldbi/aspnet-mvc-sample/assets/91586758/f3283ddb-f74d-4275-8f1b-41223b0d034a)
 
  ## Developer IDE
 
@@ -40,7 +40,7 @@ This project was created using ASP.NET MVC 4.8.1. The purpose of this applicatio
 
  ### Run a Sample Using Visual Studio 2022
  
-  * Open the solution file `BoldBI.Embed.Sample.sln` in Visual studio.
+  * Open the solution file `BoldBI.Embed.Sample.sln` in Visual Studio.
 
   * Run your ASP.NET MVC sample. After running a sample, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:5001/).
 
