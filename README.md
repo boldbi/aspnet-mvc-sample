@@ -1,64 +1,61 @@
-# BoldBI Embedding ASP.NET MVC Samples
+# Bold BI Embedded Sample in .NET MVC
 
- This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
+This project was created using ASP.NET MVC 4.8.1. The purpose of this application is to demonstrate how to render the dashboard available on your Bold BI server.
 
-This section guides you in using the Bold BI dashboard in your ASP.NET MVC sample application.
+## Dashboard view
 
- * [Requirements to run the demo](#requirements-to-run-the-demo)
- * [Using the ASP.NET MVC sample](#using-the-asp.net-mvc-samples)
- * [Online Demos](#online-demos)
- * [Documentation](#documentation)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
- ## Requirements to run the demo
-
-The samples require the following requirements to run.
+ ## Requirements/Prerequisites
 
  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
  * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 
- ## Using the ASP.NET MVC sample
+ #### Help link
+
+ * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
+
+ #### Supported browsers
+  
+  * Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
+
+ ## Configuration
+
+ * Please ensure that you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code) to enable it.
+
+    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+
+ * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file) for reference. Additionally, you can refer to the following image for visual guidance.
+
+    ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
+    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+
+ * Copy the downloaded embedConfig.json file and paste it into the designated [location](https://github.com/boldbi/aspnet-mvc-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure that you have placed it in the application as shown in the following image.
+
+   ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4d7e26c7-9a58-42d8-b212-89cafc022fd6)
+
+ ## Developer IDE
+
+  * Visual studio 2022(https://visualstudio.microsoft.com/downloads/)
+
+ ### Run a Sample Using Visual Studio 2022
  
- * Open the solution file `Syncfusion.Server.EmbedBoldBI.sln` in Visual studio. 
+  * Open the solution file `BoldBI.Embed.Sample.sln` in Visual studio.
 
- * Open the EmbedProperties.cs file in the following location, /Models/EmbedProperties.cs.
+  * Run your ASP.NET MVC sample. After running a sample, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:44314/).
 
- * Please change the following properties in the `EmbedProperties.cs` file as per your Bold BI Server.
+    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
-<meta charset="utf-8"/>
-<table>
-  <tbody>
-    <tr>
-        <td align="left">RootUrl</td>
-        <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
-    </tr>
-    <tr>
-        <td align="left">EmbedSecret</td>
-        <td align="left">Get your EmbedSecret key from the Embed tab by enabling the `Enable embed authentication` on the Administration page https://help.boldbi.com/embedded-bi/site-administration/embed-settings/.</td>
-    </tr>
-    <tr>
-        <td align="left">SiteIdentifier</td>
-        <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
-    </tr>
-    <tr>
-        <td align="left">Environment</td>
-        <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
-    </tr>
-    <tr>
-        <td align="left">UserEmail</td>
-        <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
-    </tr>
-  </tbody>
-</table>
+Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-mvc/#how-to-run-the-sample) to know how to run the sample.
 
+## Important notes
 
-Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/asp-net-mvc/#how-to-run-the-sample) to know how to run the sample.
+It is recommended to not store passwords and sensitive information in configuration files for security reasons, in a real-world application. Instead, you should consider using a secure application, such as Key Vault, to safeguard your credentials.
 
-## Online Demos
+## Online demos
 
 Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.com/embed).
 
 ## Documentation
 
 A complete Bold BI Embedding documentation can be found on [Bold BI Embedding Help](https://help.boldbi.com/embedded-bi/javascript-based/).
-
-> NOTE:  To mitigate issues related to NuGet packages, run the following command in package manager console Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r.
