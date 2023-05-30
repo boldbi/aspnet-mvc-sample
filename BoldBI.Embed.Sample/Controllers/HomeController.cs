@@ -74,8 +74,8 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpPost]
-        [Route("embeddetail/get")]
-        public ActionResult GetEmbedDetails(string embedQuerString, string dashboardServerApiUrl)
+        [Route("AuthorizationServer")]
+        public ActionResult AuthorizationServer(string embedQuerString, string dashboardServerApiUrl)
         {
             embedQuerString += "&embed_user_email=" + GlobalAppSettings.EmbedDetails.UserEmail;
             var embedDetailsUrl = "/embed/authorize?" + embedQuerString.ToLower() + "&embed_signature=" + GetSignatureUrl(embedQuerString.ToLower());
