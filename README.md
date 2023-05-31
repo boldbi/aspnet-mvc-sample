@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in .NET MVC
 
-This project was created using ASP.NET MVC 4.8.1. The purpose of this application is to demonstrate how to render the dashboard available on your Bold BI server.
+This project was created using ASP.NET MVC 4.8.1. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
 ## Dashboard view
 
