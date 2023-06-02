@@ -32,7 +32,7 @@ This project was created using ASP.NET MVC 4.8.1. This application aims to demon
 
  * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/aspnet-mvc-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure you have placed it in the application, as shown in the following image.
 
-   ![EmbedConfig image](https://github.com/boldbi/aspnet-mvc-sample/assets/91586758/f3283ddb-f74d-4275-8f1b-41223b0d034a)
+   ![EmbedConfig image](https://github.com/boldbi/aspnet-mvc-sample/assets/91586758/44292700-2774-44b3-ae5d-09f15ca646fc)
 
  ## Developer IDE
 
@@ -50,7 +50,7 @@ Please refer to the [help documentation](https://help.boldbi.com/embedding-optio
 
 ## Important notes
 
-It is recommended not to store passwords and sensitive information in configuration files for security reasons in a real-world application. Instead, you should consider using a secure application, such as Key Vault, to safeguard your credentials.
+It is recommended not to store passwords and sensitive information in configuration files for security reasons in a real-world application. Instead, it would be best if you considered using a secure application, such as Key Vault, to safeguard your credentials.
 
 ## Online demos
 
