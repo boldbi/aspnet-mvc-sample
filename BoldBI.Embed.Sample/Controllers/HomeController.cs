@@ -11,10 +11,8 @@ using System.IO;
 
 namespace BoldBI.Embed.Sample.Controllers
 {
-
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
             bool isConfigLoaded = false;
@@ -33,7 +31,6 @@ namespace BoldBI.Embed.Sample.Controllers
             ViewBag.IsConfigLoaded = isConfigLoaded;
             return View();
         }
-
 
         [HttpGet]
         [Route("dashboards/get")]
