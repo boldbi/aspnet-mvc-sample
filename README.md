@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in .NET MVC
 
-This project was created using ASP.NET MVC 4.8.1. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
+This project was created using ASP.NET MVC 4.8. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
 ## Dashboard view
 
@@ -9,7 +9,7 @@ This project was created using ASP.NET MVC 4.8.1. This application aims to demon
  ## Requirements/Prerequisites
 
  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
- * [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
+ * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 
  #### Help link
 
