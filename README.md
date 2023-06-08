@@ -42,7 +42,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
  
   * Open the solution file `BoldBI.Embed.Sample.sln` in Visual Studio.
 
-  * Run your ASP.NET MVC sample. After running a sample, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:5001/).
+  * Run your `ASP.NET MVC` sample in Visual Studio.
 
     ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
