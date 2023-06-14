@@ -49,6 +49,13 @@ namespace BoldBI.Embed.Sample.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("DashboardListing")]
+        public ActionResult DashboardListing()
+        {
+            return View();
+        }
+
         public Token GetToken()
         {
             using (var client = new HttpClient())

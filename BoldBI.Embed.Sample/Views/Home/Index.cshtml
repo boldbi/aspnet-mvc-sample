@@ -29,15 +29,8 @@
         </script>
     </head>
 
-    <body onload="Init()">
-        <div id="container">
-            <div class="header-section">
-                <div id="grid-title">All Dashboard</div>
-            </div>
-            <div id="panel">
-            </div>
-        </div>
-        <div id="viewer-section">
+    <body onload="renderDashboard(dashboardId)">
+        <div id="viewer-section" style="width: 100%";>
             <div id="dashboard"></div>
         </div>
     </body>
@@ -59,4 +52,3 @@ else
     </body>
     </html>
 }
-
