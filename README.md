@@ -4,16 +4,12 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
 
  ## Requirements/Prerequisites
 
  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
  * [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
-
- #### Help link
-
- * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
 
  #### Supported browsers
   
@@ -44,9 +40,9 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
   * Run your `ASP.NET MVC` sample in Visual Studio.
 
-    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
+    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
 	
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as https://localhost:44382/home/dashboardlisting) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as http://localhost:44382/home/dashboardlisting) to enable the dashboards list.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-mvc/#how-to-run-the-sample) to know how to run the sample.
 

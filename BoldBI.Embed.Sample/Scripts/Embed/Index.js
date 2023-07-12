@@ -60,7 +60,6 @@ function renderDashboard(dashboardId) {
         actionComplete: "emdbedDashboardActionComplete"
     });
 
-    console.log(this.dashboard);
     this.dashboard.loadDashboard();
 };
 
