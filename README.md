@@ -4,7 +4,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
 
  ## Requirements/Prerequisites
 
@@ -40,7 +40,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
   * Run your `ASP.NET MVC` sample in Visual Studio.
 
-    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
+    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
 	
 > **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as http://localhost:44382/home/dashboardlisting) to enable the dashboards list.
 
