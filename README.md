@@ -32,7 +32,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 ## Developer IDE
 
-* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+* Visual studio 2022(<https://visualstudio.microsoft.com/downloads/>)
 
 ### Run a Sample Using Visual Studio 2022
 
