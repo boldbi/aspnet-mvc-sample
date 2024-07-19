@@ -42,7 +42,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
     ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
 
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as [http://localhost:44382/home/dashboardlisting](http://localhost:44382/home/dashboardlisting)) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as <http://localhost:44382/home/dashboardlisting>) to enable the dashboards list.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-mvc/#how-to-run-the-sample) to know how to run the sample.
 
