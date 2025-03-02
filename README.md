@@ -4,7 +4,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
+![Dashboard View](images/dashboard-view.png)
 
 ## Requirements/Prerequisites
 
@@ -19,16 +19,16 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 * Please ensure you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks) to enable it.
 
-    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+    ![Embed Settings](images/embed-settings.png)
 
 * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks) for reference. Additionally, you can refer to the following image for visual guidance.
 
-    ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
-    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+    ![Embed Settings Download](images/embed-settings-download.png)
+    ![EmbedConfig Properties](images/embedconfig-properties.png)
 
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/aspnet-mvc-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure you have placed it in the application, as shown in the following image.
 
-   ![EmbedConfig image](https://github.com/boldbi/aspnet-mvc-sample/assets/91586758/44292700-2774-44b3-ae5d-09f15ca646fc)
+   ![EmbedConfig image](images/embedconfig-image.png)
 
 ## Developer IDE
 
@@ -40,7 +40,7 @@ This project was created using ASP.NET MVC 4.8. This application aims to demonst
 
 * Run your `ASP.NET MVC` sample in Visual Studio.
 
-    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c641551-ccd1-4a6d-98a0-613ff6601acf)
+    ![dashboard image](images/dashboard-view.png)
 
 > **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as <http://localhost:44382/home/dashboardlisting>) to enable the dashboards list.
 
