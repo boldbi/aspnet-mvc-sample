@@ -12,30 +12,28 @@
 {
     <!DOCTYPE html>
     <html>
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+            <link rel="stylesheet" href="~/Content/Site.css" />
+            <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/latest/boldbi-embed.js"></script>
+            <script type="text/javascript" src="~/Scripts/Embed/Index.js"></script>
+            <script type="text/javascript">
+            var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
+            var dashboardId = "@GlobalAppSettings.EmbedDetails.DashboardId";
+            var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
+            var environment = "@GlobalAppSettings.EmbedDetails.Environment";
+            var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
+            var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
+            var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
+            </script>
+        </head>
 
-    <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
-        <link rel="stylesheet" href="~/Content/Site.css" />
-        <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/latest/boldbi-embed.js"></script>
-        <script type="text/javascript" src="~/Scripts/Embed/Index.js"></script>
-        <script type="text/javascript">
-        var rootUrl = "@ViewBag.ServerUrl";
-        var dashboardId = "@ViewBag.DashboardId";
-        var siteIdentifier = "@ViewBag.SiteIdentifier";
-        var environment = "@ViewBag.Environment";
-        var embedType = "@ViewBag.EmbedType";
-        var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
-        var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
-        </script>
-    </head>
-
-    <body onload="renderDashboard(dashboardId)">
-        <div id="viewer-section" style="width: 100%";>
-            <div id="dashboard"></div>
-        </div>
-    </body>
-
-</html>
+        <body onload="renderDashboard(dashboardId)">
+            <div id="viewer-section" style="width: 100%";>
+                <div id="dashboard"></div>
+            </div>
+        </body>
+    </html>
 }
 
 else

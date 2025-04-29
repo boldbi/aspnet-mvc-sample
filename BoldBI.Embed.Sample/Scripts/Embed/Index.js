@@ -40,24 +40,10 @@ function renderDashboard(dashboardId) {
         serverUrl: rootUrl + "/" + siteIdentifier,
         dashboardId: dashboardId,
         embedContainerId: "dashboard",
-        embedType: embedType,
         environment: environment,
-        width: "100%",
-        height: "100%",
-        expirationTime: 100000,
         authorizationServer: {
             url: authorizationServerUrl
-        },
-        autoRefreshSettings: {
-            enabled: true,
-            hourlySchedule: {
-                hours: 0,
-                minutes: 1,
-                seconds: 0
-            }
-        },
-        actionBegin: "emdbedDashboardActionBegin",
-        actionComplete: "emdbedDashboardActionComplete"
+        }
     });
 
     this.dashboard.loadDashboard();
