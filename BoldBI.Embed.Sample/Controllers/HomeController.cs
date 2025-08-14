@@ -22,12 +22,6 @@ namespace BoldBI.Embed.Sample.Controllers
                 string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
                 GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
                 isConfigLoaded = true;
-                // Pass specific properties to the view using ViewBag
-                ViewBag.DashboardId = GlobalAppSettings.EmbedDetails.DashboardId;
-                ViewBag.ServerUrl = GlobalAppSettings.EmbedDetails.ServerUrl;
-                ViewBag.EmbedType = GlobalAppSettings.EmbedDetails.EmbedType;
-                ViewBag.Environment = GlobalAppSettings.EmbedDetails.Environment;
-                ViewBag.SiteIdentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier;
             }
             catch
             {
@@ -59,13 +53,6 @@ namespace BoldBI.Embed.Sample.Controllers
         [Route("DashboardListing")]
         public ActionResult DashboardListing()
         {
-            // Pass specific properties to the view using ViewBag
-            ViewBag.DashboardId = GlobalAppSettings.EmbedDetails.DashboardId;
-            ViewBag.ServerUrl = GlobalAppSettings.EmbedDetails.ServerUrl;
-            ViewBag.EmbedType = GlobalAppSettings.EmbedDetails.EmbedType;
-            ViewBag.Environment = GlobalAppSettings.EmbedDetails.Environment;
-            ViewBag.SiteIdentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier;
-
             return View();
         }
 
@@ -107,8 +94,7 @@ namespace BoldBI.Embed.Sample.Controllers
                 return Json(resultContent);
             }
         }
-
-
+        
         public string GetSignatureUrl(string message)
         {
             var encoding = new System.Text.UTF8Encoding();
